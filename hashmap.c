@@ -99,7 +99,7 @@ Recuerde que el arreglo es **circular**.
     }
 */
 Pair * searchMap(HashMap * map,  char * key) {   
-    pos = hash(key,map->capacity);
+    long pos = hash(key,map->capacity);
     while(map->buckets[pos] != NULL){
         if(is_equal(map->buckets[pos]->key,key)) return map->buckets[pos];
     }

@@ -37,3 +37,9 @@ hashmap.c:102:5: error: 'pos' undeclared (first use in this function)
      ^~~
 hashmap.c:102:5: note: each undeclared identifier is reported only once for each function it appears in
 a6afe6a
+Wed, Apr 16, 2025  9:58:08 AM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+953633c
