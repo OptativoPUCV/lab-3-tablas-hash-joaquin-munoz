@@ -49,3 +49,9 @@ Wed, Apr 16, 2025 10:01:26 AM:
  tests:  6|0
    [ INFO ] buscando elemento con key=key
 b48b230
+Wed, Apr 16, 2025 10:05:38 AM: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  8|3
+total_score: 40/70
+e777a00
