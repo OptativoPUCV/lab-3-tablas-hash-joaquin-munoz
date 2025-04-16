@@ -78,3 +78,9 @@ Wed, Apr 16, 2025 10:15:41 AM:
  tests:  0|0
    [ INFO ] se intenta eliminar el mismo dato
 a977eb1
+Wed, Apr 16, 2025 10:18:58 AM: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  11|2
+total_score: 50/70
+17df3e3

@@ -91,6 +91,7 @@ void eraseMap(HashMap * map,char* key){
         }
         pos = (pos + 1) % map->capacity;
     }
+    return;
 }
 /*
 3.- Implemente la función Pair * searchMap(HashMap * map,  char * key), la cual retorna el **Pair** asociado a la clave ingresada. 
