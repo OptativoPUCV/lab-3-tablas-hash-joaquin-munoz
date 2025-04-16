@@ -72,3 +72,9 @@ Wed, Apr 16, 2025 10:14:54 AM:
  tests:  0|0
    [ INFO ] se elimina dato con key=olla
 26e06f5
+Wed, Apr 16, 2025 10:15:41 AM: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  0|0
+   [ INFO ] se intenta eliminar el mismo dato
+a977eb1
