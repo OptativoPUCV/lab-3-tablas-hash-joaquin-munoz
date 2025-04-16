@@ -54,7 +54,7 @@ void enlarge(HashMap * map) {
  inicializa el arreglo de buckets con casillas nulas, inicializa el resto de variables y retorna el mapa. Inicialice el índice current a -1.*/
 HashMap * createMap(long capacity) {
     HashMap *map = (HashMap*)malloc(sizeof(HashMap));
-    map->buckets = (Pair*)calloc(capacity,sizeof(Pair*));
+    map->buckets = (Pair**)calloc(capacity,sizeof(Pair*));
     
     map->capacity = capacity;
     map->current = -1;
