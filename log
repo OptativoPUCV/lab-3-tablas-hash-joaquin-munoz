@@ -66,3 +66,9 @@ hashmap.c:89:13: error: 'size' undeclared (first use in this function)
              ^~~~
 hashmap.c:89:13: note: each undeclared identifier is reported only once for each function it appears in
 92c8b93
+Wed, Apr 16, 2025 10:14:54 AM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+   [ INFO ] se elimina dato con key=olla
+26e06f5
