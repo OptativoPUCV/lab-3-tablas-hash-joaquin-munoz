@@ -101,7 +101,10 @@ Recuerde que el arreglo es **circular**.
 Pair * searchMap(HashMap * map,  char * key) {   
     long pos = hash(key,map->capacity);
     while(map->buckets[pos] != NULL){
-        if(is_equal(map->buckets[pos]->key,key)) return map->buckets[pos];
+        if(is_equal(map->buckets[pos]->key,key)) {
+            map->current = pos;
+            return map->buckets[pos];
+        }
     }
     return NULL;
 }
