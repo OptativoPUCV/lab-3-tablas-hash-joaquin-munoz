@@ -78,7 +78,7 @@ void enlarge(HashMap * map) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-    long pos = hash(key,map->capacity);
+    /*long pos = hash(key,map->capacity);
     while(map->buckets[pos] != NULL){
         if(is_equal(map->buckets[pos]->key,key)) {
             map->current = pos;
@@ -86,22 +86,10 @@ Pair * searchMap(HashMap * map,  char * key) {
         }
         pos = (pos + 1) % map->capacity;
     }
+    */
     return NULL;
 }
-/*Implemente las funciones para recorrer la estructura: Pair * firstMap(HashMap * map) retorna el primer **Pair** válido del arreglo buckets. 
-Pair * nextMap(HashMap * map) retorna el siguiente **Pair** del arreglo buckets a partir índice current. Recuerde actualizar el índice.
 
-    Pair * firstMap(HashMap * map) {
-        
-
-        return NULL;
-    }
-
-    Pair * nextMap(HashMap * map)  {
-       
-
-        return NULL;
-    }*/
 Pair * firstMap(HashMap * map) {
     
     return NULL;
