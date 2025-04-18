@@ -15,7 +15,11 @@ struct HashMap {
     long capacity; //capacidad de la tabla
     long current; //indice del ultimo dato accedido
 };
+HashMap * createMap(long capacity) {
 
+
+    return NULL;
+}
 Pair * createPair( char * key,  void * value) {
     return NULL;
 }
