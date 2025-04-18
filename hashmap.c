@@ -71,8 +71,23 @@ e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función 
         map -> capacity *= 2;*/
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
-
+    long newCapacity = map->capacity * 2;
+    Pair newBucket = (Pair ) malloc(sizeof( (Pair *) * Capacity));
+    for (long i = 0; i < newCapacity; i++) {
+        Pair *current = map->buckets[i];
+        if (current != NULL) {
+            long index = hash(current->key, newCapacity);
+            
+            while (newBucket[index] != NULL) {
+                index = (index + 1) % newCapacity;
+            }
+            newBucket[index] = createPair(current->key, current->value);
+        }
+    }
+    free(map->buckets);
+    map->buckets = newBuck;
+    map->capacity = newCapacity;
+    
 }
 
 /*1.- Implemente la función *createMap* en el archivo hashmap.c. Esta función crea una variable de tipo HashMap,

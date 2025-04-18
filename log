@@ -90,3 +90,51 @@ Wed, Apr 16, 2025 10:45:03 AM:
  tests:  11|2
 total_score: 50/70
 64f0cc9
+Fri, Apr 18, 2025  4:01:54 PM: 
+ hashmap.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:75:56: error: 'Capacity' undeclared (first use in this function)
+     Pair newBucket = (Pair ) malloc(sizeof( (Pair *) * Capacity));
+                                                        ^~~~~~~~
+hashmap.c:75:56: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:81:29: error: subscripted value is neither array nor pointer nor vector
+             while (newBucket[index] != NULL) {
+                             ^
+hashmap.c:84:22: error: subscripted value is neither array nor pointer nor vector
+             newBucket[index] = createPair(current->key, current->value);
+                      ^
+hashmap.c:88:20: error: 'newBuck' undeclared (first use in this function)
+     map->buckets = newBuck;
+                    ^~~~~~~
+hashmap.c:90:1: error: stray '\302' in program
+     
+ ^
+hashmap.c:90:2: error: stray '\240' in program
+     
+  ^
+hashmap.c:90:3: error: stray '\302' in program
+     
+   ^
+hashmap.c:90:4: error: stray '\240' in program
+     
+    ^
+hashmap.c:90:5: error: stray '\302' in program
+     
+     ^
+hashmap.c:90:6: error: stray '\240' in program
+     
+      ^
+hashmap.c:90:7: error: stray '\302' in program
+     
+       ^
+hashmap.c:90:8: error: stray '\240' in program
+     
+        ^
+hashmap.c:75:10: error: variable 'newBucket' set but not used [-Werror=unused-but-set-variable]
+     Pair newBucket = (Pair ) malloc(sizeof( (Pair *) * Capacity));
+          ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+8c79868
