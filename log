@@ -200,3 +200,14 @@ hashmap.c:76:29: error: 'mapa' undeclared (first use in this function)
                              ^~~~
 hashmap.c:76:29: note: each undeclared identifier is reported only once for each function it appears in
 a0e5c63
+Fri, Apr 18, 2025  4:12:32 PM: 
+ hashmap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:94:23: error: 'mapa' undeclared (first use in this function)
+             insertMap(mapa, baldesAntiguos[i]->key, baldesAntiguos[i]->value);
+                       ^~~~
+hashmap.c:94:23: note: each undeclared identifier is reported only once for each function it appears in
+faa2518
