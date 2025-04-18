@@ -71,32 +71,31 @@ e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función 
         map -> capacity *= 2;*/
 void enlarge(HashMap * map) {
     enlarge_called = 1; // no borrar (testing purposes)
-    
-    // a - Guardamos el arreglo de buckets antiguo
-    Pair **baldesAntiguos = map->buckets;
+    // gurdar datos antes de cambiarlos
+    Pair **bucketold = map->buckets;
     long capacidadAntigua = map->capacity;
     
-    // b - Duplicamos la capacidad
+    // duplicar capacidad
     map->capacity *= 2;
     
-    // c - Asignamos nuevo arreglo de buckets
+    //nuevo arreglo de buckets 
     map->buckets = (Pair **) malloc(sizeof(Pair *) * map->capacity);
     for (long i = 0; i < map->capacity; i++) {
         map->buckets[i] = NULL;
     }
     
-// d - Reiniciamos el tamaño a 0
+// reiniciamos tamaño
     map->size = 0;
     
-// e - Reinsertamos los elementos antiguos usando insertMap
+// reordenamos datos anteriores 
     for (long i = 0; i < capacidadAntigua; i++) {
-        if (baldesAntiguos[i] != NULL && baldesAntiguos[i]->key != NULL) {
-            insertMap(map, baldesAntiguos[i]->key, baldesAntiguos[i]->value);
+        if (bucketold[i] != NULL && bucketold[i]->key != NULL) {
+            insertMap(map, bucketold[i]->key, bucketold[i]->value);
         }
     }
     
     // Liberamos el arreglo antiguo
-    free(baldesAntiguos);
+    free(bucketold);
 }
     
 /*
