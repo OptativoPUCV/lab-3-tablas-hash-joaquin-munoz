@@ -106,13 +106,15 @@ void enlarge(HashMap * map) {
 }
 
 Pair * firstMap(HashMap * map) {
-    for (long i = 0; i < map->capacity; i++) {  // recorremos el mapa para allar el primer pair valido y lo entrgamos , en otro caso retotnamos null
-        if (map->buckets[i] != NULL) {
+    // recorremos el mapa para allar el primer pair valido y lo entrgamos , en otro caso retotnamos null.
+    for (long i = 0; i < map->capacity; i++) {
+        if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
             map->current = i;
             return map->buckets[i];
         }
     }
     return NULL;
+
 }
 
 Pair * nextMap(HashMap * map) {
