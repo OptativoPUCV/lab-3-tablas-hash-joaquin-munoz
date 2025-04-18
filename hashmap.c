@@ -116,6 +116,11 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+    for (long i = map->current + 1; i < map->capacity; i++) { // recorremos desde el current + 1 (el siguiente dato)
+        if (map->buckets[i] != NULL) { //preguntamos si es valido
+            map->current = i;
+            return map->buckets[i]; // lo retornamos
+        }
+    }
     return NULL;
 }
