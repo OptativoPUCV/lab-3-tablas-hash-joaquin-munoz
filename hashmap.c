@@ -78,7 +78,31 @@ void eraseMap(HashMap * map,  char * key){
 }
 void enlarge(HashMap * map) {
     enlarge_called = 1;  //no borrar (testing purposes)
-    return;
+    // gurdar datos antes de cambiarlos
+    Pair **bucketold = map->buckets;
+    long capacidadAntigua = map->capacity;
+    
+    // duplicar capacidad
+    map->capacity *= 2;
+    
+    //nuevo arreglo de buckets 
+    map->buckets = (Pair **) malloc(sizeof(Pair *) * map->capacity);
+    for (long i = 0; i < map->capacity; i++) {
+        map->buckets[i] = NULL;
+    }
+    
+    // reiniciamos tamaño
+    map->size = 0;
+    
+    // reordenamos datos anteriores 
+    for (long i = 0; i < capacidadAntigua; i++) {
+        if (bucketold[i] != NULL && bucketold[i]->key != NULL) {
+            insertMap(map, bucketold[i]->key, bucketold[i]->value);
+        }
+    }
+    
+    // Liberamos el arreglo antiguo
+    free(bucketold);
 }
 Pair * firstMap(HashMap * map) {
     
