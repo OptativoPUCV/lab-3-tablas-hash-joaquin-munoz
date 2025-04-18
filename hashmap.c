@@ -39,13 +39,14 @@ int is_equal(void* key1, void* key2){
 }
 
 void insertMap(HashMap * map, char * key, void * value) {
-    long posicion = hash(key,map->capacity);
+    /*long posicion = hash(key,map->capacity);
     while(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
         posicion = (posicion + 1) % map->capacity;
     }
     Pair * par = createPair(strdup(key),value);
     map->size++;
     map->buckets[posicion] = par;
+    */
 }
 void enlarge(HashMap * map) {
     enlarge_called = 1; // no borrar (testing purposes)

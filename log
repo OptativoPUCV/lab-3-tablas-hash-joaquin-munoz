@@ -338,3 +338,22 @@ C:\Users\jemcj\AppData\Local\Temp\cc8lzhT5.o: In function `erase_test3':
 C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:333: undefined reference to `eraseMap'
 collect2.exe: error: ld returned 1 exit status
 d07dfc2
+Fri, Apr 18, 2025  6:12:42 PM: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+C:\Users\jemcj\AppData\Local\Temp\ccQ7c0RM.o: In function `createMap_test1':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:65: undefined reference to `createMap'
+C:\Users\jemcj\AppData\Local\Temp\ccQ7c0RM.o: In function `createMap_test2':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:76: undefined reference to `createMap'
+C:\Users\jemcj\AppData\Local\Temp\ccQ7c0RM.o: In function `createMap_test3':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:84: undefined reference to `createMap'
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:90: undefined reference to `createMap'
+C:\Users\jemcj\AppData\Local\Temp\ccQ7c0RM.o: In function `erase_test1':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:292: undefined reference to `eraseMap'
+C:\Users\jemcj\AppData\Local\Temp\ccQ7c0RM.o: In function `erase_test2':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:320: undefined reference to `eraseMap'
+C:\Users\jemcj\AppData\Local\Temp\ccQ7c0RM.o: In function `erase_test3':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:333: undefined reference to `eraseMap'
+collect2.exe: error: ld returned 1 exit status
+a44c9d0
