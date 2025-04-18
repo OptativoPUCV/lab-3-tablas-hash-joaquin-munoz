@@ -211,3 +211,22 @@ hashmap.c:94:23: error: 'mapa' undeclared (first use in this function)
                        ^~~~
 hashmap.c:94:23: note: each undeclared identifier is reported only once for each function it appears in
 faa2518
+Fri, Apr 18, 2025  4:12:53 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+C:\Users\jemcj\AppData\Local\Temp\cccuElx3.o: In function `createMap_test1':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:65: undefined reference to `createMap'
+C:\Users\jemcj\AppData\Local\Temp\cccuElx3.o: In function `createMap_test2':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:76: undefined reference to `createMap'
+C:\Users\jemcj\AppData\Local\Temp\cccuElx3.o: In function `createMap_test3':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:84: undefined reference to `createMap'
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:90: undefined reference to `createMap'
+C:\Users\jemcj\AppData\Local\Temp\cccuElx3.o: In function `erase_test1':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:292: undefined reference to `eraseMap'
+C:\Users\jemcj\AppData\Local\Temp\cccuElx3.o: In function `erase_test2':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:320: undefined reference to `eraseMap'
+C:\Users\jemcj\AppData\Local\Temp\cccuElx3.o: In function `erase_test3':
+C:\Users\jemcj\Downloads\lab-3-tablas-hash-joaquin-munoz/test.c:333: undefined reference to `eraseMap'
+collect2.exe: error: ld returned 1 exit status
+2abf02f

@@ -91,7 +91,7 @@ void enlarge(HashMap * map) {
 // e - Reinsertamos los elementos antiguos usando insertMap
     for (long i = 0; i < capacidadAntigua; i++) {
         if (baldesAntiguos[i] != NULL && baldesAntiguos[i]->key != NULL) {
-            insertMap(mapa, baldesAntiguos[i]->key, baldesAntiguos[i]->value);
+            insertMap(map, baldesAntiguos[i]->key, baldesAntiguos[i]->value);
         }
     }
     
