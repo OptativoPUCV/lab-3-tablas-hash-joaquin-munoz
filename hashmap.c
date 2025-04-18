@@ -49,7 +49,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 void enlarge(HashMap * map) {
     enlarge_called = 1; // no borrar (testing purposes)
-    // gurdar datos antes de cambiarlos
+    /*// gurdar datos antes de cambiarlos
     Pair **bucketold = map->buckets;
     long capacidadAntigua = map->capacity;
     
@@ -73,7 +73,7 @@ void enlarge(HashMap * map) {
     }
     
     // Liberamos el arreglo antiguo
-    free(bucketold);
+    free(bucketold);*/
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
