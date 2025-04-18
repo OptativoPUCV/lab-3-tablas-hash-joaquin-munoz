@@ -25,7 +25,10 @@ HashMap * createMap(long capacity) {
     return map;
 }
 Pair * createPair( char * key,  void * value) {
-    return NULL;
+    Pair * new = (Pair *)malloc(sizeof(Pair));
+    new->key = key;
+    new->value = value;
+    return new;
 }
 
 long hash( char * key, long capacity) {
