@@ -138,3 +138,27 @@ hashmap.c:75:10: error: variable 'newBucket' set but not used [-Werror=unused-bu
           ^~~~~~~~~
 cc1.exe: all warnings being treated as errors
 8c79868
+Fri, Apr 18, 2025  4:02:09 PM: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:75:56: error: 'Capacity' undeclared (first use in this function)
+     Pair newBucket = (Pair ) malloc(sizeof( (Pair *) * Capacity));
+                                                        ^~~~~~~~
+hashmap.c:75:56: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:81:29: error: subscripted value is neither array nor pointer nor vector
+             while (newBucket[index] != NULL) {
+                             ^
+hashmap.c:84:22: error: subscripted value is neither array nor pointer nor vector
+             newBucket[index] = createPair(current->key, current->value);
+                      ^
+hashmap.c:88:20: error: 'newBuck' undeclared (first use in this function)
+     map->buckets = newBuck;
+                    ^~~~~~~
+hashmap.c:75:10: error: variable 'newBucket' set but not used [-Werror=unused-but-set-variable]
+     Pair newBucket = (Pair ) malloc(sizeof( (Pair *) * Capacity));
+          ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+58410d5

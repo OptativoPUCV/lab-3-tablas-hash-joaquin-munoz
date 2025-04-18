@@ -87,7 +87,6 @@ void enlarge(HashMap * map) {
     free(map->buckets);
     map->buckets = newBuck;
     map->capacity = newCapacity;
-    
 }
 
 /*1.- Implemente la función *createMap* en el archivo hashmap.c. Esta función crea una variable de tipo HashMap,
