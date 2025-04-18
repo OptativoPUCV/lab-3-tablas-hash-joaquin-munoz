@@ -36,9 +36,11 @@ int is_equal(void* key1, void* key2){
 }
 
 void insertMap(HashMap * map, char * key, void * value) {
+    return;
 }
 void enlarge(HashMap * map) {
     enlarge_called = 1;  //no borrar (testing purposes)
+    return;
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
