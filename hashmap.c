@@ -50,7 +50,9 @@ void enlarge(HashMap * map) {
 Pair * searchMap(HashMap * map,  char * key) {   
     return NULL;
 }
+void eraseMap(HashMap * map,  char * key){
 
+}
 Pair * firstMap(HashMap * map) {
     
     return NULL;
