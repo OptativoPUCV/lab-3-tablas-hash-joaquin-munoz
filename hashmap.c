@@ -17,10 +17,7 @@ struct HashMap {
 };
 
 Pair * createPair( char * key,  void * value) {
-    Pair * new = (Pair *)malloc(sizeof(Pair));
-    new->key = key;
-    new->value = value;
-    return new;
+    return NULL;
 }
 
 long hash( char * key, long capacity) {
