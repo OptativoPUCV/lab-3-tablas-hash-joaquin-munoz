@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
-#include "hashmap.c"
+#include "hashmap.h"
 
 
 typedef struct HashMap HashMap;
