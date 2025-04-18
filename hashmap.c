@@ -96,7 +96,7 @@ void enlarge(HashMap * map) {
     
     // reordenamos datos anteriores 
     for (long i = 0; i < capacidadAntigua; i++) {
-        if (bucke_told[i] != NULL && bucket_old[i]->key != NULL) {
+        if (bucket_old[i] != NULL && bucket_old[i]->key != NULL) {
             insertMap(map, bucket_old[i]->key, bucket_old[i]->value);
         }
     }
