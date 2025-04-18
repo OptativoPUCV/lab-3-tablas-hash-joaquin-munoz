@@ -79,19 +79,19 @@ void eraseMap(HashMap * map,  char * key){
 void enlarge(HashMap * map) {
     enlarge_called = 1;  //no borrar (testing purposes)
     // gurdar datos antes de cambiarlos
-    Pair **bucketold = map->buckets;
+    Pair **bucket_old = map->buckets;
     long capacidadAntigua = map->capacity;
     
-    // duplicar capacidad
+    // duplicar capacidad de map nuevo 
     map->capacity *= 2;
     
-    //nuevo arreglo de buckets 
+    //asignamos nueva memoria para el nuevo mapa 
     map->buckets = (Pair **) malloc(sizeof(Pair *) * map->capacity);
     for (long i = 0; i < map->capacity; i++) {
         map->buckets[i] = NULL;
     }
     
-    // reiniciamos tamaño
+    // reiniciamos tamaño de datos ingresados 
     map->size = 0;
     
     // reordenamos datos anteriores 
@@ -102,10 +102,16 @@ void enlarge(HashMap * map) {
     }
     
     // Liberamos el arreglo antiguo
-    free(bucketold);
+    free(bucket_old);
 }
+
 Pair * firstMap(HashMap * map) {
-    
+    for (long i = 0; i < map->capacity; i++) {  // recorremos el mapa para allar el primer pair valido y lo entrgamos , en otro caso retotnamos null
+        if (map->buckets[i] != NULL) {
+            map->current = i;
+            return map->buckets[i];
+        }
+    }
     return NULL;
 }
 
