@@ -39,54 +39,13 @@ int is_equal(void* key1, void* key2){
 }
 
 void insertMap(HashMap * map, char * key, void * value) {
-    /*long posicion = hash(key,map->capacity);
-    while(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
-        posicion = (posicion + 1) % map->capacity;
-    }
-    Pair * par = createPair(strdup(key),value);
-    map->size++;
-    map->buckets[posicion] = par;
-    */
+
 }
 void enlarge(HashMap * map) {
     enlarge_called = 1; // no borrar (testing purposes)
-    /*// gurdar datos antes de cambiarlos
-    Pair **bucketold = map->buckets;
-    long capacidadAntigua = map->capacity;
-    
-    // duplicar capacidad
-    map->capacity *= 2;
-    
-    //nuevo arreglo de buckets 
-    map->buckets = (Pair **) malloc(sizeof(Pair *) * map->capacity);
-    for (long i = 0; i < map->capacity; i++) {
-        map->buckets[i] = NULL;
-    }
-    
-// reiniciamos tamaño
-    map->size = 0;
-    
-// reordenamos datos anteriores 
-    for (long i = 0; i < capacidadAntigua; i++) {
-        if (bucketold[i] != NULL && bucketold[i]->key != NULL) {
-            insertMap(map, bucketold[i]->key, bucketold[i]->value);
-        }
-    }
-    
-    // Liberamos el arreglo antiguo
-    free(bucketold);*/
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-    /*long pos = hash(key,map->capacity);
-    while(map->buckets[pos] != NULL){
-        if(is_equal(map->buckets[pos]->key,key)) {
-            map->current = pos;
-            return map->buckets[pos];
-        }
-        pos = (pos + 1) % map->capacity;
-    }
-    */
     return NULL;
 }
 
