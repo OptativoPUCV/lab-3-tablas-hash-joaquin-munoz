@@ -70,50 +70,35 @@ e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función 
     void enlarge(HashMap * map){ 
         map -> capacity *= 2;*/
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
-    long newCapacity = map->capacity * 2;
-    Pair newBucket = (Pair ) malloc(sizeof( (Pair *) * newCapacity));
-    for (long i = 0; i < newCapacity; i++) {
-        Pair *current = map->buckets[i];
-        if (current != NULL) {
-            long indice = hash(current->key, newCapacity);
-            
-            while (newBucket[indice] != NULL) {
-                index = (indice + 1) % newCapacity;
-            }
-            newBucket[indice] = createPair(current->key, current->value);
-        }
-    }
-    free(map->buckets);
-    map->buckets = newBuck;
-    map->capacity = newCapacity;
-}
-
-/*1.- Implemente la función *createMap* en el archivo hashmap.c. Esta función crea una variable de tipo HashMap,
- inicializa el arreglo de buckets con casillas nulas, inicializa el resto de variables y retorna el mapa. Inicialice el índice current a -1.*/
-HashMap * createMap(long capacity) {
-    HashMap *map = (HashMap*)malloc(sizeof(HashMap));
-    map->buckets = (Pair**)calloc(capacity,sizeof(Pair*));
+    enlarge_called = 1; // no borrar (testing purposes)
     
-    map->capacity = capacity;
-    map->current = -1;
-    map->size = 0;
-    return map;
-}  
-/*4.- Implemente la función void eraseMap(HashMap * map,  char * key). Está función elimina el dato correspondiente a la clave key. Para hacerlo debe
- buscar el dato y luego *marcarlo* para que no sea válido.
-**No elimine el par**, sólo invalídelo asignando NULL a la clave (pair->key=NULL).
-Recuerde actualizar la variable size.*/
-void eraseMap(HashMap * map,char* key){ 
-    long pos = hash(key,map->capacity);
-    while(map->buckets[pos] != NULL){
-        if(is_equal(map->buckets[pos]->key,key)){
-            map->buckets[pos]->key = NULL;
-            map->size--;
-        }
-        pos = (pos + 1) % map->capacity;
+    // a - Guardamos el arreglo de buckets antiguo
+    Pair **baldesAntiguos = mapa->buckets;
+    long capacidadAntigua = mapa->capacity;
+    
+    // b - Duplicamos la capacidad
+    mapa->capacity *= 2;
+    
+    // c - Asignamos nuevo arreglo de buckets
+    mapa->buckets = (Pair **) malloc(sizeof(Pair *) * mapa->capacity);
+    for (long i = 0; i < mapa->capacity; i++) {
+        mapa->buckets[i] = NULL;
     }
+    
+// d - Reiniciamos el tamaño a 0
+    mapa->size = 0;
+    
+// e - Reinsertamos los elementos antiguos usando insertMap
+    for (long i = 0; i < capacidadAntigua; i++) {
+        if (baldesAntiguos[i] != NULL && baldesAntiguos[i]->key != NULL) {
+            insertMap(mapa, baldesAntiguos[i]->key, baldesAntiguos[i]->value);
+        }
+    }
+    
+    // Liberamos el arreglo antiguo
+    free(baldesAntiguos);
 }
+    
 /*
 3.- Implemente la función Pair * searchMap(HashMap * map,  char * key), la cual retorna el **Pair** asociado a la clave ingresada. 
 Recuerde que para buscar el par debe:

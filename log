@@ -189,3 +189,14 @@ hashmap.c:75:10: error: variable 'newBucket' set but not used [-Werror=unused-bu
           ^~~~~~~~~
 cc1.exe: all warnings being treated as errors
 d937e28
+Fri, Apr 18, 2025  4:12:00 PM: 
+ hashmap.c | 57 +++++++++++++++++++++------------------------------------
+ 1 file changed, 21 insertions(+), 36 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:76:29: error: 'mapa' undeclared (first use in this function)
+     Pair **baldesAntiguos = mapa->buckets;
+                             ^~~~
+hashmap.c:76:29: note: each undeclared identifier is reported only once for each function it appears in
+a0e5c63
